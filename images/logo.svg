@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 994.88">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #991b1e;
+      }
+
+      .cls-2 {
+        fill: #c66;
+      }
+
+      .cls-3 {
+        fill: #641c1c;
+      }
+
+      .cls-4 {
+        fill: #fff;
+        font-family: Geneva, Geneva;
+        font-size: 400px;
+      }
+    </style>
+  </defs>
+  <g>
+    <polyline class="cls-2" points="810.42 668.96 505.51 502.9 805.54 328.57 489.79 151.38 189.58 325.91 189.58 657.86"/>
+    <polygon class="cls-3" points="505.51 502.99 810.42 668.96 510.21 843.5 189.58 657.95 505.51 502.99"/>
+    <polygon class="cls-1" points="805.54 328.57 810.42 668.96 505.51 502.99 805.54 328.57"/>
+  </g>
+  <text class="cls-4" transform="translate(250.12 637.77)"><tspan x="0" y="0">BS</tspan></text>
+</svg>

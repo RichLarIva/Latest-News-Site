@@ -1,0 +1,303 @@
+:root{
+    --g1: hsl(0, 56%, 25%);
+    --g2: hsl(0, 50%, 60%);
+    --g3: hsl(0, 100%, 30%);
+}
+kbd {
+    border-radius: 3px;
+    padding: 1px 2px 0;
+    border: 1px solid rgb(83, 78, 78);
+    background: silver;
+    color:gray;
+    font-family: monospace;
+  }
+  
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Geneva;
+}
+
+.container{
+    z-index: 5;
+    position: absolute;
+    top:45%;
+    left:50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+.logo{
+    margin:auto;
+    width:30vw;
+    height:30vh;
+}
+
+@keyframes background-pan{
+    from{
+        background-position: 0% center;
+    }
+    to {
+        background-position: -200% center;
+    }
+}
+
+body {
+    animation: background-pan 10s linear infinite;
+    background: linear-gradient(to right, var(--g1), var(--g2), var(--g3));
+    background-size: 200%;
+    min-height: 100vh;
+
+    margin: 0px;
+  }
+.overflowHide{
+    overflow-x:hidden;
+    overflow-y: scroll;
+}
+
+.overflowHideY{
+    overflow:hidden;
+}
+
+  #tiles {
+    height: calc(100vh - 1px);
+    width: calc(100vw - 1px);
+    position: relative;
+    z-index: 2;
+    
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-template-rows: repeat(var(--rows), 1fr);
+  }
+  
+  .tile {
+    position: relative;
+  }
+  
+  .tile:hover:before {
+    background-color: rgb(30, 30, 30);
+  }
+  
+  .tile:before {
+    background-color: rgb(15, 15, 15);
+    content: "";
+    inset: 0.5px;
+    position: absolute;
+  }
+
+  input[type="submit"]{
+    background: var(--g1);
+    color:var(--g2);
+  }
+input{
+    padding-left: 5px;
+    display: block;
+    margin: auto;
+    margin-top:5px;
+    height:35px;
+    border-radius: 2px;
+    background: var(--g3);
+    width:80%;
+    border:none;
+    color:white;
+}
+
+input:focus, input:hover{
+    font-size: 125%;
+    transition-duration: 350ms;
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+::placeholder{
+    color:var(--g2);
+    opacity: 0.95;
+}
+
+#regi, #linkReg{
+    color:white;
+    text-align: center;
+}
+
+#linkReg{
+    font-weight: bolder;
+    transition-duration: 350ms;
+}
+
+#linkReg:hover{
+    font-size: 115%;
+}
+
+form span{
+    color:white;
+    margin:auto;
+    display: block;
+    width:60%;
+    text-align: center;
+}
+
+form span::after{
+    margin-left: 7px;
+    content:" SHOW PASSWORD";
+}
+
+form span::after ~ input[type="checkbox"]:checked{
+    content:"Hide Password";
+}
+
+input[type="checkbox"]{
+    display:inline;
+    width:30px;
+    height:30px;
+    accent-color: var(--g2);
+}
+
+header{
+    width: 100vw;
+    height:23vh;
+    background-color: rgb(35, 35, 35);
+}
+
+header .logo{
+    height:128px;
+    width:128px;
+    margin:0;
+}
+
+#userInfo{
+    position: absolute;
+    top:5px;
+    right: 10px;
+    height:9vh;
+    width:15vw;
+    background: hsl(0, 0%, 24%);
+    outline: 2px solid hsl(0, 0%, 20%);
+    box-shadow: -1px -1px 8px 3px hsl(0, 0%, 17%),
+        0px 0px 15px 3px hsl(0, 0%, 28%),
+        2px 2px 8px 2px hsl(0, 0%, 35%);
+}
+
+#userInfo a{
+    color:white;
+}
+
+.btn{
+    background: silver;
+    border-radius: 2px;
+    color:black;
+    text-decoration: none;
+    cursor:pointer;
+    transition-duration: 250ms;
+}
+
+.btn:hover{
+    font-size: large;
+    text-decoration: underline;
+}
+
+.btn-red{
+    background: var(--g1);
+    color:var(--g2);
+}
+
+#user{
+    z-index: 100;
+    color:white;
+    position: absolute;
+    top:70%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background: rgb(35, 35, 35);
+}
+#resPwd{
+    z-index: 100;
+    color:white;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background: rgb(35, 35, 35);
+}
+
+input:not([type="date"]):invalid:not(:placeholder-shown){
+    background-color: ivory;
+    outline:2px solid orange;
+    color:red;
+}
+
+
+.profileImg{
+    width:256px;
+    height:256px;
+    display:block;
+}
+
+#pwdWarn{
+    width:5px;
+}
+
+#categories{
+    width:90%;
+    margin:auto;
+    text-align: center;
+    color:white;
+}
+
+#categories>select{
+    background: var(--g3);
+    color: white;
+    border:none;
+    border-radius: 2px;
+    font-size: 18px;
+}
+
+.articleImg{
+    width: 150px;
+    height:150px;
+    border-radius: 43% 57% 58% 42% / 31% 41% 59% 69%;
+    margin-left:12px;
+}
+
+#articles{
+    animation: background-pan 10s linear infinite;
+    background: linear-gradient(to right, var(--g1), var(--g2), var(--g3));
+    background-size: 200%;
+    border:rgb(35, 35, 35) solid 10px;
+    width:80vw;
+    margin:30px;
+}
+
+
+hr{
+    border:none;
+    height:1vh;
+    animation: background-pan 10s linear infinite;
+    background: linear-gradient(to right, var(--g1), var(--g2), var(--g3));
+    background-size: 200%;
+    width:75%;
+    margin:auto;
+}
+
+.article{
+    margin:5px;
+    background: rgb(35, 35, 35);
+    color:white;
+    padding:5px;
+}
+
+.article a{
+    color:white;
+    transition-duration: 250ms;
+    text-decoration: none;
+}
+
+.article a:hover{
+    color:var(--g3);
+    font-size: 115%;
+    text-decoration: underline;
+    outline: solid var(--g1) 5px;
+    outline-offset: 4px;
+    border-radius: 20px;
+}
